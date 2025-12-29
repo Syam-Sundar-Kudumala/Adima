@@ -9,30 +9,30 @@
   --font-body: 'Rajdhani', sans-serif;
 
   /* Dark mode by default for that premium EV look */
-  --background: 222 47% 5%;
+  --background: 230 25% 8%;
   --foreground: 210 40% 98%;
   
   /* Electric Blue Primary */
-  --primary: 190 100% 50%;
+  --primary: 185 100% 45%;
   --primary-foreground: 222 47% 5%;
   
   /* Deep Tech Secondary */
-  --secondary: 217 33% 17%;
+  --secondary: 222 25% 15%;
   --secondary-foreground: 210 40% 98%;
   
-  --muted: 217 33% 12%;
+  --muted: 222 25% 10%;
   --muted-foreground: 215 20% 65%;
   
   /* Electric Purple Accent */
-  --accent: 265 89% 66%;
+  --accent: 270 95% 70%;
   --accent-foreground: 210 40% 98%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   
-  --border: 217 33% 20%;
-  --input: 217 33% 15%;
-  --ring: 190 100% 50%;
+  --border: 222 25% 18%;
+  --input: 222 25% 12%;
+  --ring: 185 100% 45%;
   
   --radius: 0.25rem;
 }
