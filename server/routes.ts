@@ -4,8 +4,27 @@ import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
 import { Resend } from "resend";
+import * as XLSX from "xlsx";
+import path from "path";
+import fs from "fs/promises";
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+
+async function updateExcelFile() {
+  try {
+    const entries = await storage.getWaitingListEntries();
+    const worksheet = XLSX.utils.json_to_sheet(entries);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Waiting List");
+    
+    const buf = XLSX.write(workbook, { type: "buffer", bookType: "xlsx" });
+    const filePath = path.join(process.cwd(), "waiting_list.xlsx");
+    await fs.writeFile(filePath, buf);
+    console.log(`[Excel] Updated waiting_list.xlsx at ${filePath}`);
+  } catch (err) {
+    console.error("[Excel] Failed to update excel file:", err);
+  }
+}
 
 export async function registerRoutes(
   httpServer: Server,
@@ -18,6 +37,9 @@ export async function registerRoutes(
       
       // Log for MVP notification simulation
       console.log(`[Notification] New waiting list sign-up: ${entry.email} (${entry.name})`);
+
+      // Update Excel file
+      await updateExcelFile();
 
       // Send email notification if Resend is configured
       if (resend) {
