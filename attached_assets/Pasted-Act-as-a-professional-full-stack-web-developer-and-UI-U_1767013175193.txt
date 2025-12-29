@@ -1,0 +1,86 @@
+Act as a professional full-stack web developer and UI/UX designer.
+
+Build a modern, responsive website for an electric vehicle brand called:
+
+“11thOne – EV Adventure Motorcycle for Men & Exclusive Scooty for Women”
+
+BRAND OVERVIEW
+11thOne is a next-generation electric vehicle brand committed to transforming both urban and off-road mobility in India.
+
+PRODUCTS
+1. EV Adventure Motorcycle for Men
+   - Built for power, durability, and adventure
+   - Designed for off-road and long-distance riding
+   - Advanced electric engineering
+   - Rugged, bold, premium design
+   - Eco-friendly performance
+
+2. Exclusive EV Scooty for Women
+   - Designed with elegance, comfort, and safety
+   - Lightweight and easy to handle
+   - Smooth and reliable for daily commuting
+   - Stylish, modern design
+   - Rider-focused ergonomics
+
+IMPORTANT NOTE
+Both vehicles are currently under prototype development and not yet launched.
+
+WEBSITE REQUIREMENTS
+
+PAGES / SECTIONS
+1. Hero Section
+   - Brand name: 11thOne
+   - Tagline: “Powering the Future of Electric Mobility”
+   - Strong EV visuals
+   - Call-to-action: “Join the Waiting List”
+
+2. About 11thOne
+   - Mission and vision
+   - Focus on innovation, sustainability, and performance
+   - India-focused EV brand story
+
+3. Product Showcase
+   - EV Adventure Motorcycle for Men (separate section)
+   - Exclusive EV Scooty for Women (separate section)
+   - Clear descriptions, icons, and highlights
+
+4. Prototype Status Section
+   - Message explaining vehicles are under development
+   - Emphasis on upcoming innovation
+
+5. Waiting List Section
+   - Form fields: Name, Email, Phone
+   - Message: “Be the first to experience 11thOne EVs”
+
+6. Footer
+   - Brand name
+   - Contact email
+   - Social media placeholders
+   - Copyright
+
+DESIGN REQUIREMENTS
+- Modern, premium EV startup look
+- Dark + electric accent colors
+- Mobile-first responsive design
+- Smooth animations and hover effects
+- Clean typography
+
+TECH STACK (Preferred)
+- Frontend: React + Vite + TypeScript
+- Styling: Tailwind CSS
+- Backend: Node.js + Express
+- Database: SQLite (Drizzle ORM)
+- Email notification on waiting list submission
+- Deployment ready for Render
+
+EXTRA
+- SEO-friendly
+- Chrome tab title and favicon
+- Clean, interview-ready code
+- README with setup and deployment steps
+
+DELIVERABLE
+- Complete website source code
+- UI structure
+- Backend integration
+- Deployment instructions
