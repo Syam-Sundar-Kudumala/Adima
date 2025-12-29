@@ -13,7 +13,15 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 async function updateExcelFile() {
   try {
     const entries = await storage.getWaitingListEntries();
-    const worksheet = XLSX.utils.json_to_sheet(entries);
+    const data = entries.map(entry => ({
+      ID: entry.id,
+      Name: entry.name,
+      Email: entry.email,
+      Phone: entry.phone,
+      "Joined Date": entry.createdAt ? new Date(entry.createdAt).toLocaleString() : ""
+    }));
+    
+    const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Waiting List");
     
