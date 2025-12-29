@@ -22,13 +22,18 @@ export async function registerRoutes(
       // Send email notification if Resend is configured
       if (resend) {
         try {
-          await resend.emails.send({
-            from: "11thOne Waiting List <onboarding@resend.dev>",
+          const { data, error } = await resend.emails.send({
+            from: "11thOne <delivered@resend.dev>",
             to: ["syamsundark1999@gmail.com"],
             subject: "New Waiting List Joiner: " + entry.name,
             text: `A new user has joined the 11thOne waiting list.\n\nName: ${entry.name}\nEmail: ${entry.email}\nPhone: ${entry.phone}\nJoined at: ${entry.createdAt}`,
           });
-          console.log("[Notification] Email sent successfully to syamsundark1999@gmail.com");
+          
+          if (error) {
+            console.error("[Notification] Resend error:", error);
+          } else {
+            console.log("[Notification] Email request sent:", data?.id);
+          }
         } catch (emailError) {
           console.error("[Notification] Failed to send email:", emailError);
         }
