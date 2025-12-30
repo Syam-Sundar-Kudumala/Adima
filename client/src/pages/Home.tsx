@@ -297,7 +297,7 @@ export default function Home() {
               <h4 className="font-bold mb-4 text-primary">Contact</h4>
               <ul className="space-y-2 text-muted-foreground text-sm">
                 <li><a href="mailto:hello@11thone.com" className="hover:text-white transition-colors">hello@11thone.com</a></li>
-                <li>Bangalore, India</li>
+                <li>Hyderabad, India</li>
               </ul>
             </div>
             <div>
